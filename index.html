@@ -82,10 +82,55 @@
     html, .custom-cursor {
     cursor: url('source/icecream.png'), auto; /* Use a custom image as the cursor */
     }
-  
+    
+    #loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* or any background color/image */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    #loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+    }
+
   </style>
 </head>
 <body>
+  
+  <!-- Loading screen -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+  </div>
+  
+  <script>
+    window.addEventListener('load', function () {
+      document.getElementById('loader-wrapper').style.display = 'none';
+    });
+  </script> 
+
+
+  <!-- Title -->
+  <div class="overlay">
+    <div class="title">AiScReam Concert</div>
+    <div class="desc">Welcome to AiScream concert and enjoy it.</div>
+
   <!-- Background YouTube Video -->
   <div class="video-bg">
     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=1&controls=0&loop=1&playlist=W-0lSiV-H7k"
@@ -95,11 +140,8 @@
     </iframe>
    </div>
 
-   <div class="overlay">
-    <div class="title">AiScReam Concert</div>
-    <div class="desc">Welcome to AiScream concert and enjoy it.</div>
     
-
+  <!-- media -->
   <div class="gallery">
       <img src="source/Furihata Ai.png" src-hover="./source/Furihata Ai.png"
            onmouseover="this.src='source/Ruby.png'"     \\ tukar utk hover mouseover
@@ -112,6 +154,7 @@
            onmouseout="this.src='source/Ookuma Wakana.png'" />
    </div>
   
+  <!-- audio -->
     <script src="bgAutoplay.js"></script>
    
   <script>
@@ -126,14 +169,16 @@
       });
    </script>
 
-    <div class="volume-control">
+
+  <!-- Volume control -->
+  <div class="volume-control">
       <img src="source/volume-icon.png" alt="Volume" class="volume-button" id="volumeToggle">
       <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
     </div>
     
 
 
-    <!-- Volume Slider -->
+  <!-- Volume Slider -->
     <link rel="stylesheet" href="volume-control.css">
 
     <script>
