@@ -1,0 +1,27 @@
+.volume-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  z-index: 9999;
+}
+
+.volume-button {
+  width: 100%;
+  cursor: pointer;
+}
+
+#volumeSlider {
+  display: none;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  width: 100px;
+  height: 20px;
+  background: transparent;
+}
+
+#volumeSlider.show {
+  display: block;
+}
