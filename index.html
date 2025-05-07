@@ -73,6 +73,34 @@
      
     }
 
+    .volume-control {
+     position: fixed;
+     border-top: 20px;
+     right: 20px;
+     width: 40px;
+     z-index: 9999;
+    }
+
+    .volume-button {
+     width: 100%;
+     cursor: pointer;
+    }
+
+    #volumeSlider {
+     display: none;
+     position: absolute;
+     top: -80px;
+     left: 50%;
+     transform: translateX(-50%) rotate(-90deg);
+     width: 100px;
+     height: 20px;
+     background: transparent;
+    }
+
+    #volumeSlider.show {
+     display: block;
+    }
+
     .BgMusic {
       position: fixed;
       bottom: 20px;
@@ -80,7 +108,7 @@
     }
 
     html, .custom-cursor {
-    cursor: url('source/icecream.png'), auto; /* Use a custom image as the cursor */
+    cursor: url('source/icecream.webp'), auto; /* Use a custom image as the cursor */
     }
     
     #loader-wrapper {
@@ -143,15 +171,15 @@
     
   <!-- media -->
   <div class="gallery">
-      <img src="source/Furihata Ai.png" src-hover="./source/Furihata Ai.png"
-           onmouseover="this.src='source/Ruby.png'"     \\ tukar utk hover mouseover
-           onmouseout="this.src='source/Furihata Ai.png'" />
-      <img src="source/Oonishi Aguri.png" 
-           onmouseover="this.src='source/Ayumu.png'" 
-           onmouseout="this.src='source/Oonishi Aguri.png'" />
-      <img src="source/Ookuma Wakana.png" 
-           onmouseover="this.src='source/Shiki.png'" 
-           onmouseout="this.src='source/Ookuma Wakana.png'" />
+      <img src="source/Furihata Ai.webp" src-hover="./source/Furihata Ai.webp"
+           onmouseover="this.src='source/Ruby.webp'"     \\ tukar utk hover mouseover
+           onmouseout="this.src='source/Furihata Ai.webp'" />
+      <img src="source/Oonishi Aguri.webp" 
+           onmouseover="this.src='source/Ayumu.webp'" 
+           onmouseout="this.src='source/Oonishi Aguri.webp'" />
+      <img src="source/Ookuma Wakana.webp" 
+           onmouseover="this.src='source/Shiki.webp'" 
+           onmouseout="this.src='source/Ookuma Wakana.webp'" />
    </div>
   
   <!-- audio -->
@@ -172,14 +200,14 @@
 
   <!-- Volume control -->
   <div class="volume-control">
-      <img src="source/volume-icon.png" alt="Volume" class="volume-button" id="volumeToggle">
+      <img src="source/volume-icon.webp" alt="Volume" class="volume-button" id="volumeToggle">
       <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
     </div>
     
 
 
   <!-- Volume Slider -->
-    <link rel="stylesheet" href="volume-control.css">
+
 
     <script>
       const slider = document.getElementById('volumeSlider');
