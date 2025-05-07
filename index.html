@@ -108,7 +108,7 @@
     }
 
     html, .custom-cursor {
-    cursor: url('source/icecream.webp'), auto; /* Use a custom image as the cursor */
+    cursor: url('image/icecream.webp'), auto; /* Use a custom image as the cursor */
     }
     
     #loader-wrapper {
@@ -171,15 +171,15 @@
     
   <!-- media -->
   <div class="gallery">
-      <img src="source/Furihata Ai.webp" src-hover="./source/Furihata Ai.webp"
-           onmouseover="this.src='source/Ruby.webp'"     \\ tukar utk hover mouseover
-           onmouseout="this.src='source/Furihata Ai.webp'" />
-      <img src="source/Oonishi Aguri.webp" 
-           onmouseover="this.src='source/Ayumu.webp'" 
-           onmouseout="this.src='source/Oonishi Aguri.webp'" />
-      <img src="source/Ookuma Wakana.webp" 
-           onmouseover="this.src='source/Shiki.webp'" 
-           onmouseout="this.src='source/Ookuma Wakana.webp'" />
+      <img src="image/Furihata Ai.webp" src-hover="./image/Furihata Ai.webp"
+           onmouseover="this.src='image/Ruby.webp'"     \\ tukar utk hover mouseover
+           onmouseout="this.src='image/Furihata Ai.webp'" />
+      <img src="image/Oonishi Aguri.webp" 
+           onmouseover="this.src='image/Ayumu.webp'" 
+           onmouseout="this.src='image/Oonishi Aguri.webp'" />
+      <img src="image/Ookuma Wakana.webp" 
+           onmouseover="this.src='image/Shiki.webp'" 
+           onmouseout="this.src='image/Ookuma Wakana.webp'" />
    </div>
   
   <!-- audio -->
@@ -187,7 +187,7 @@
    
   <script>
       new BgMusic({
-        src: 'source/AiScReam.mp3',  // Replace with your actual file path
+        src: 'audio/AiScReam.mp3',  // Replace with your actual file path
         on: function () {
           console.log("🎵 Autoplay success");
         },
@@ -200,7 +200,7 @@
 
   <!-- Volume control -->
   <div class="volume-control">
-      <img src="source/volume-icon.webp" alt="Volume" class="volume-button" id="volumeToggle">
+      <img src="image/volume-icon.webp" alt="Volume" class="volume-button" id="volumeToggle">
       <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
     </div>
     
