@@ -110,55 +110,17 @@
     html, .custom-cursor {
     cursor: url('image/icecream.webp'), auto; /* Use a custom image as the cursor */
     }
-    
-    #loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000; /* or any background color/image */
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-    #loader {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-     0% { transform: rotate(0deg); }
-     100% { transform: rotate(360deg); }
-    }
 
   </style>
 </head>
 <body>
-  
-  <!-- Loading screen -->
-  <div id="loader-wrapper">
-    <div id="loader"></div>
-  </div>
-  
-  <script>
-    window.addEventListener('load', function () {
-      document.getElementById('loader-wrapper').style.display = 'none';
-    });
-  </script> 
-
 
   <!-- Title -->
   <div class="overlay">
     <div class="title">AiScReam Concert</div>
     <div class="desc">Welcome to AiScream concert and enjoy it.</div>
 
+    
   <!-- Background YouTube Video -->
   <div class="video-bg">
     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&mute=1&controls=0&loop=1&playlist=W-0lSiV-H7k"
@@ -172,7 +134,7 @@
   <!-- media -->
   <div class="gallery">
       <img src="image/Ookuma Wakana.webp" 
-           onmouseover="this.src='image/Shiki.webp'"         \\ tukar utk hover mouseover
+           onmouseover="this.src='image/Shiki.webp'"
            onmouseout="this.src='image/Ookuma Wakana.webp'" />
       <img src="image/Oonishi Aguri.webp" 
            onmouseover="this.src='image/Ayumu.webp'" 
@@ -181,7 +143,8 @@
            onmouseover="this.src='image/Ruby.webp'"     
            onmouseout="this.src='image/Furihata Ai.webp'" />
    </div>
-  
+
+    
   <!-- audio -->
     <script src="bgAutoplay.js"></script>
    
@@ -207,8 +170,6 @@
 
 
   <!-- Volume Slider -->
-
-
     <script>
       const slider = document.getElementById('volumeSlider');
       const button = document.getElementById('volumeToggle');
